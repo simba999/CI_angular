@@ -1,0 +1,226 @@
+.dt-buttons{
+		display: none;
+	}
+
+
+/*Import file*/
+.modalImportCsv.modal .modalDialogImportCsv {
+    max-width: 800px;
+}
+.modal-content.popUpBoxSpaceImport{
+	 padding: 0 4%;
+}
+ select.AssignForWidth.BoxSizeForAssign.form-control {
+    /*width: inherit;
+    height: 100%;*/
+    width: 90%;
+    margin: 0px 15px;
+    color: #cfcfcf;
+}	 
+/*h4#myModalLabel{
+	padding: 2% 0;
+}*/
+form#import_contacts_form_CSV{
+	color: black;
+	font-weight: 400;
+}
+
+span.colorYelloText{
+	color:#f0c400;
+}
+
+p.MarginTextMiddel{
+	margin-bottom: 25px;
+}
+
+a.colorYelloTextDownTemp{
+	color:#f0c400;
+}
+
+label.UploadCsvLable {
+    width: 100%;
+    border-radius: 0%;
+    font-size: 85%;
+}
+button#SuccessBtnYelloAllId{
+	width:30%;
+}
+/*also in import Success*/
+input.SuccessBtnYelloAll{
+	width:30%
+}
+
+/*also in import Success*/
+button.CancelBtnYelloBorWhietAll{
+	background-color: #FFFFFF; color:#f0c400; width:30%;
+}
+
+button.CancelBtnYelloBorWhietAll:hover{
+	color:#ffffff;	
+}
+
+p.TextOtherIm{
+	margin-bottom: 10px;
+}
+
+span.borderForUploadCsv{
+	border-radius: 0px;
+}
+
+
+/*Import Success Msg*/
+.modal-content.popUpBoxSpaceImportMsg{
+	 padding: 1% 3%;
+}
+
+.modalImportCsvMsg.modal .modalDialogImportCsvMsg {
+    max-width: 800px;
+}
+
+
+.ImportFontSetSuccMsg{
+	color: black;font-weight: 300; text-align: center;
+}
+
+p.successMsgImport{
+	font-size: 2rem
+}
+
+p.FontTextSuccMsgImp{
+	color:#000000;
+}
+
+/*Export Module*/
+.modalExportCsv.modal .modalDialogExportCsv {
+    max-width: 600px;
+}
+.modal-header.popUpBoxExportHeader {
+    padding: 5% 0;
+}
+.modal-body.mainBodyPartExport {
+    padding: 5% 0;
+}
+.container.mainBodyPartExportContainer {
+    padding: 0;
+}
+
+/*.modal-content.popUpBoxSpaceExport{
+	 padding: 2% 4%;
+}*/
+
+/*h4.ExportTitle{
+	padding: 1% 0;
+}*/
+form.FormTextSetExport{
+	color: black;font-weight: 300;
+}
+
+p.TextMiddleExport{
+	/*margin-bottom: 2%; color: black;font-weight: 400;font-size: 1.5rem;*/
+	 margin-bottom: 2%;color: #6a6c6f;font-weight: 400;font-size: 1rem;
+}
+
+p.marginExport{
+	margin-bottom: 2%;
+}
+
+
+input.radioExport{
+	margin-bottom: 2%;font-weight: 300;
+}
+
+select.TextstyleExport{
+	width: 20%;
+}
+
+
+p.colorExportWhi{
+	color:#000000;
+}
+
+button.ExportBtn{
+	width:33%;
+	/*line-height: 10px;*/
+    font-size: 14px
+}
+
+button.CancelBtnExport{
+	background-color: #FFFFFF;
+	color:#f0c400; 
+	width:33%;
+	/*line-height: 10px;*/
+    font-size: 14px
+}
+
+button.CancelBtnExport:hover{
+	color:#ffffff;	
+}
+
+select#export_contact_from_circle_show_me{
+	display: inline-block !important;
+}
+/*import file for upload csv functionality*/
+.imp-contact .custom-file-control:lang(en):after {
+	content: none;
+}
+.forBrowseBtn .custom-file-control:before{
+	background-color: #ffffff !important; 
+    border: 1px solid rgba(0,0,0,.15) !important; 
+    border-radius: 0 .25rem .25rem 0 !important;
+    border-left: none !important;
+	color: #f0c400 !important;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+//Bellow
+select#selectInteractionType {
+    width: 50% !important;
+}
+button.btn.btn-success.createLeadInteraction {
+    background-color: #ffd000;
+    color: #fff3ef;
+    border-radius: 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    border: 0px;
+    width: 40%;
+}
+.cancelLeadInteraction {
+    background-color: #ffffff;
+    color: #ffd000;
+    border-color: #ffd000;
+    width: 30%;
+    margin-left: 8px;
+}
+/*button.btn-yellow.btn.btn-success.createLeadInteractionSubmitButton {
+    background-color: #f0c400;
+    display: inline-block;
+}*/
+button.btn.btn-yellow.CLeadIntSubmitBtn {
+    width: 30%;
+}
+button.btn.btn-success.createLeadInteractionSubmitButton {
+    width: 30%;
+    margin-right:8px;
+}
+#create-interaction .modal-header {
+    border-bottom: 0px !important;
+}
+
+#create-interaction.snooze.modal .modal-dialog {
+    max-width: 700px;
+}
+.col-md-12.interactionTitle {
+    height: 150px;
+}
+.col-md-12.interactionDate {
+    height: 90px;
+}
+button.btn.btn-yellow-outline.btn-block.cancelLeadInteraction {
+    display: inline-block;
+}
+label.lblInteractionType {
+    font-size: 14px;
+    font-weight: bold;
+}
+
