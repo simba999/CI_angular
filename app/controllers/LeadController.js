@@ -928,18 +928,20 @@ app.controller('LeadController', function (dataFactory, $scope, $http, $timeout,
 
     // upload userImage
     $scope.userUploadImage = function(ele) {
+        $scope.userImage = ele[0];
+        $scope.isLeadImage = false;
         
-				$scope.userImage = ele[0];
-                console.log('clicked up:', $scope.userImage)
-				if (ele && ele[0]) {
-					var reader = new FileReader();
-					reader.onload = function (e) {
-						$('.leadUserImage')
-								.attr('src', e.target.result)
-								.width(200)
-								.height(200);
-					};
-					reader.readAsDataURL(ele[0]);
-				}
+        if (ele && ele[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.name-abbreviation').css('display', 'none');
+                $('.leadUserImage')
+                    .attr('src', e.target.result)
+                    .css('display', '')
+                    .width(200)
+                    .height(200);
+            };
+            reader.readAsDataURL(ele[0]);
+        }
    }
 });
