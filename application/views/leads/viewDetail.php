@@ -8,15 +8,21 @@
                         
                             <div class="col-md-2 col-sm-2 col-xs-12 lead-detail-left text-center">
                                 <div class="avatar avatar-lg avatar-circle fix-image" >
-                                    <a href="javascript:void(0)" class="image-parent">
                                         <?php if(!empty($leadDetails->userAvatar)) { ?>
-                                            <img class="center-block leadUserImage" src="<?php echo (!empty($leadDetails->userAvatar)) ? base_url() . UPLOAD_DIR . '/' . IMAGE . '/' . LEAD_IMAGE . '/' . $leadDetails->userAvatar : base_url() . ASSETS_DIR . '/global/images/Blank_Club_Website_Avatar_Gray.jpg'; ?>" alt="avatar">
-                                            <div class="chng-img"><i class="fa fa-camera"></i> </div>
-                                            <input  ng-model="form.userImage" onchange="angular.element(this).scope().userUploadImage(this.files)"  type="file" id="userImage" name="userImage" accept="image/x-png,image/gif,image/jpeg" ngf-pattern=".jpg,.png" ngf-accept="image/*" class="form-control Profile-input-file" />
+                                            <div class="upload-image">
+                                                <img class="center-block leadUserImage" src="<?php echo (!empty($leadDetails->userAvatar)) ? base_url() . UPLOAD_DIR . '/' . IMAGE . '/' . LEAD_IMAGE . '/' . $leadDetails->userAvatar : base_url() . ASSETS_DIR . '/global/images/Blank_Club_Website_Avatar_Gray.jpg'; ?>" alt="avatar">
+                                            </div>
+                                            <!--<div class="chng-img"><i class="fa fa-camera"></i> </div>-->
+                                            <!--<input  ng-model="form.userImage" onchange="angular.element(this).scope().userUploadImage(this.files)"  type="file" id="userImage" name="userImage" accept="image/x-png,image/gif,image/jpeg" ngf-pattern=".jpg,.png" ngf-accept="image/*" class="form-control Profile-input-file" />-->
                                         <?php } else { ?>
-                                            <img class="center-block leadUserImage" src="<?php echo (!empty($leadDetails->userAvatar)) ? base_url() . UPLOAD_DIR . '/' . IMAGE . '/' . LEAD_IMAGE . '/' . $leadDetails->userAvatar : base_url() . ASSETS_DIR . '/global/images/Blank_Club_Website_Avatar_Gray.jpg'; ?>" alt="avatar">
+                                            <div class="upload-image">
+                                               <name-abbreviation name="<?php echo $leadDetails->leadUserName; ?>"></name-abbreviation>
+                                               <img class="center-block leadUserImage" src="<?php echo (!empty($leadDetails->userAvatar)) ? base_url() . UPLOAD_DIR . '/' . IMAGE . '/' . LEAD_IMAGE . '/' . $leadDetails->userAvatar : base_url() . ASSETS_DIR . '/global/images/Blank_Club_Website_Avatar_Gray.jpg'; ?>" alt="avatar" style="display: none;">
+                                            </div>
+                                            <div ng-if="isLeadImage">
                                             <div class="chng-img"><i class="fa fa-camera"></i> </div>
                                             <input  ng-model="form.userImage" onchange="angular.element(this).scope().userUploadImage(this.files)"  type="file" id="userImage" name="userImage" accept="image/x-png,image/gif,image/jpeg" ngf-pattern=".jpg,.png" ngf-accept="image/*" class="form-control Profile-input-file" />
+                                            </div>
                                         <?php } ?>
                                     </a>
                                 </div>
@@ -639,12 +645,15 @@
                                                                                 <h3 class="text-uppercase">Circle</h3>
                                                                                 <form method="POST" name="LeadCircle" role="form" ng-submit="addLeadCircle()" id="frmAddLeadCircle">
                                                                                     <input  type="hidden"  ng-model="form.addleadcircle.leadId" name="leadId" />
-                                                                                    <div class="select-basket">
-                                                                                        <div class="checkbox" ng-repeat="circle in circles">
-																							<input class="checkboxCircle" type="checkbox" ng-model="form.addleadcircle.leadcircle[circle.Id]" ng-init="form.addleadcircle.leadcircle[circle.Id] = circle.checked" id="cb-{{circle.Id}}">
-																						<label for="cb-{{circle.Id}}"><span class="custom-color" style="background-color:{{circle.Color}}"></span>{{circle.Name}}</label>
+                                                                                    <div class="fl-container">
+                                                                                        <div class="select-basket">
+                                                                                            <div class="round" ng-repeat="circle in circles">
+                                                                                                <input class="checkboxCircle" type="checkbox" ng-model="form.addleadcircle.leadcircle[circle.Id]" ng-init="form.addleadcircle.leadcircle[circle.Id] = circle.checked" id="cb-{{circle.Id}}">
+                                                                                                <label for="cb-{{circle.Id}}" style="background-color:{{circle.Color}}"></label>
+                                                                                                <span>{{circle.Name}}</span>
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div> 
+                                                                                    </div>
 																					
 																					
 																					

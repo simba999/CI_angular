@@ -280,15 +280,16 @@ app.directive('bgDate', function () {
 });
 
 app.directive('nameAbbreviation', function ($compile) {
-    var colorList = [
-        "maroon", "red", "purple", "fuchsia", "green", "yellow", "teal", "aqua", "orange", "bisque", "cyan","lightseagreen", "lightskyblue", "lightslategray", "lightsteelblue", "limegreen", "lightsalmon", "mediumorchid"
-        ];
-
     return {
         restrict: 'E',
 		scope: { name: "@"},
         replace: true,
         link: function (scope, element, attrs) {
+            var colorList = [
+                "maroon", "red", "purple", "fuchsia", "green", "teal", 
+                "aqua", "orange", "bisque", "cyan","lightseagreen", "lightskyblue", 
+                "lightslategray", "lightsteelblue", "limegreen", "lightsalmon", "mediumorchid"
+                ];
             var arrName = scope.name.split(' ');
             var initName = arrName[0].charAt(0).toUpperCase() + arrName[1].charAt(0).toUpperCase();
             scope.initName = initName;
