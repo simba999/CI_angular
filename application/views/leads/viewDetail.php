@@ -645,12 +645,15 @@
                                                                                 <h3 class="text-uppercase">Circle</h3>
                                                                                 <form method="POST" name="LeadCircle" role="form" ng-submit="addLeadCircle()" id="frmAddLeadCircle">
                                                                                     <input  type="hidden"  ng-model="form.addleadcircle.leadId" name="leadId" />
-                                                                                    <div class="select-basket">
-                                                                                        <div class="checkbox" ng-repeat="circle in circles">
-																							<input class="checkboxCircle" type="checkbox" ng-model="form.addleadcircle.leadcircle[circle.Id]" ng-init="form.addleadcircle.leadcircle[circle.Id] = circle.checked" id="cb-{{circle.Id}}">
-																						<label for="cb-{{circle.Id}}"><span class="custom-color" style="background-color:{{circle.Color}}"></span>{{circle.Name}}</label>
+                                                                                    <div class="fl-container">
+                                                                                        <div class="select-basket">
+                                                                                            <div class="round" ng-repeat="circle in circles">
+                                                                                                <input class="checkboxCircle" type="checkbox" ng-model="form.addleadcircle.leadcircle[circle.Id]" ng-init="form.addleadcircle.leadcircle[circle.Id] = circle.checked" id="cb-{{circle.Id}}">
+                                                                                                <label for="cb-{{circle.Id}}" style="background-color:{{circle.Color}}"></label>
+                                                                                                <span>{{circle.Name}}</span>
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div> 
+                                                                                    </div>
 																					
 																					
 																					
