@@ -8,7 +8,6 @@
                         
                             <div class="col-md-2 col-sm-2 col-xs-12 lead-detail-left text-center">
                                 <div class="avatar avatar-lg avatar-circle fix-image" >
-                                    <a href="javascript:void(0)" class="image-parent">
                                         <?php if(!empty($leadDetails->userAvatar)) { ?>
                                             <img class="center-block leadUserImage" src="<?php echo (!empty($leadDetails->userAvatar)) ? base_url() . UPLOAD_DIR . '/' . IMAGE . '/' . LEAD_IMAGE . '/' . $leadDetails->userAvatar : base_url() . ASSETS_DIR . '/global/images/Blank_Club_Website_Avatar_Gray.jpg'; ?>" alt="avatar">
                                             <div class="chng-img"><i class="fa fa-camera"></i> </div>
